@@ -168,6 +168,20 @@ details {
   box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
 }
 
+.map-frame {
+  margin-top: 0.9rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+}
+
 .timeline {
   display: grid;
   gap: 0.8rem;
