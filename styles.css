@@ -182,6 +182,28 @@ details {
   border: 0;
 }
 
+
+
+.river-prose {
+  max-width: 920px;
+}
+
+.river-prose h3 {
+  margin-top: 2rem;
+}
+
+.river-prose p {
+  line-height: 1.75;
+  color: #1e293b;
+}
+
+.river-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 .timeline {
   display: grid;
   gap: 0.8rem;
@@ -272,7 +294,8 @@ textarea {
   .grid-2,
   .gallery-grid,
   .pricing-grid,
-  .footer-grid {
+  .footer-grid,
+  .river-grid {
     grid-template-columns: 1fr;
   }
 
