@@ -221,6 +221,11 @@ details {
   gap: 0.8rem;
 }
 
+.gallery-collapsible {
+  overflow: hidden;
+  transition: max-height 0.55s ease;
+}
+
 .gallery-grid figure {
   margin: 0;
   border-radius: 12px;
@@ -236,6 +241,31 @@ details {
 
 .gallery-grid img:hover {
   transform: scale(1.06);
+}
+
+.gallery-toggle {
+  margin: 1rem auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gallery-toggle::after {
+  content: '▾';
+  font-size: 1rem;
+  transition: transform 0.35s ease;
+}
+
+.gallery-toggle[aria-expanded='true']::after {
+  transform: rotate(180deg);
 }
 
 .pricing-grid {
