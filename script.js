@@ -2,10 +2,8 @@ const menuToggleElement = document.getElementById('menu-toggle');
 const navLinksElement = document.getElementById('nav-links');
 const bookingFormElement = document.getElementById('booking-form');
 const formNoteElement = document.getElementById('form-note');
-const galleryCollapsibleElement = document.getElementById('gallery-collapsible');
 const galleryGridElement = document.getElementById('gallery-grid');
 const galleryToggleElement = document.getElementById('gallery-toggle');
-const GALLERY_PREVIEW_COUNT = 6;
 
 if (menuToggleElement && navLinksElement) {
   menuToggleElement.addEventListener('click', () => {
@@ -31,51 +29,27 @@ if (bookingFormElement && formNoteElement) {
   });
 }
 
-if (galleryCollapsibleElement && galleryGridElement && galleryToggleElement) {
-  const galleryItems = Array.from(galleryGridElement.querySelectorAll('figure'));
+if (galleryGridElement && galleryToggleElement) {
   let isGalleryExpanded = false;
+  const galleryItems = galleryGridElement.querySelectorAll('figure');
 
-  const calculatePreviewHeight = () => {
-    const previewItem = galleryItems[GALLERY_PREVIEW_COUNT - 1];
-
-    if (!previewItem) {
-      return galleryGridElement.scrollHeight;
-    }
-
-    return previewItem.offsetTop + previewItem.offsetHeight;
-  };
-
-  const setGalleryHeight = () => {
-    const targetHeight = isGalleryExpanded ? galleryGridElement.scrollHeight : calculatePreviewHeight();
-    galleryCollapsibleElement.style.maxHeight = `${targetHeight}px`;
-  };
-
-  const updateToggleLabel = () => {
+  const updateGalleryState = () => {
+    galleryGridElement.classList.toggle('is-expanded', isGalleryExpanded);
+    galleryGridElement.classList.toggle('gallery-grid--collapsed', !isGalleryExpanded);
     galleryToggleElement.textContent = isGalleryExpanded
       ? 'Скрыть часть фотографий'
       : 'Показать всю галерею';
     galleryToggleElement.setAttribute('aria-expanded', String(isGalleryExpanded));
   };
 
-  const initializeGallery = () => {
-    if (galleryItems.length <= GALLERY_PREVIEW_COUNT) {
-      galleryToggleElement.hidden = true;
-      galleryCollapsibleElement.style.maxHeight = `${galleryGridElement.scrollHeight}px`;
-      return;
-    }
+  if (galleryItems.length <= 6) {
+    galleryToggleElement.hidden = true;
+  } else {
+    galleryToggleElement.addEventListener('click', () => {
+      isGalleryExpanded = !isGalleryExpanded;
+      updateGalleryState();
+    });
 
-    updateToggleLabel();
-    setGalleryHeight();
-  };
-
-  galleryToggleElement.addEventListener('click', () => {
-    isGalleryExpanded = !isGalleryExpanded;
-    updateToggleLabel();
-    setGalleryHeight();
-  });
-
-  window.addEventListener('resize', setGalleryHeight);
-  window.addEventListener('load', setGalleryHeight);
-
-  initializeGallery();
+    updateGalleryState();
+  }
 }
