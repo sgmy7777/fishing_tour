@@ -217,19 +217,24 @@
         <div class="container">
           <h2>Фотогалерея</h2>
           <p class="section-intro">Природа Кольского полуострова, уловы гостей и атмосфера лагеря.</p>
-          <div class="gallery-grid">
-            <figure><img src="/image/IMG_BEAUTIFULL.jpg" alt="Река в Мурманской области" /></figure>
-            <figure><img src="/image/IMG_BIRCH-ISLAND.jpg" alt="Северная природа" /></figure>
-            <figure><img src="/image/IMG_BOAT.jpg" alt="Рыболовный лагерь" /></figure>
-            <figure><img src="/image/IMG_FLOVERS.jpg" alt="Лес и река" /></figure>
-            <figure><img src="/image/IMG_HELICOPTER.jpg" alt="Улов в туре" /></figure>
-            <figure><img src="/image/IMG_SMALL-STREEM.jpg" alt="Горы и вода" /></figure>
-            <figure><img src="/image/IMG_BEN.jpg" alt="Горы и вода" /></figure>
-            <figure><img src="/image/IMG_EGEED.jpg" alt="Горы и вода" /></figure>
-            <figure><img src="/image/IMG_PANA.jpg" alt="Горы и вода" /></figure>
-            <figure><img src="/image/IMG_PandH.jpg" alt="Горы и вода" /></figure>
-            <figure><img src="/image/IMG_STEPHAN.jpg" alt="Горы и вода" /></figure>
+          <div class="gallery-collapsible">
+            <div class="gallery-grid gallery-grid--collapsed" id="gallery-grid">
+              <figure><img src="/image/IMG_BEAUTIFULL.jpg" alt="Река в Мурманской области" /></figure>
+              <figure><img src="/image/IMG_BIRCH-ISLAND.jpg" alt="Северная природа" /></figure>
+              <figure><img src="/image/IMG_BOAT.jpg" alt="Рыболовный лагерь" /></figure>
+              <figure><img src="/image/IMG_FLOVERS.jpg" alt="Лес и река" /></figure>
+              <figure><img src="/image/IMG_HELICOPTER.jpg" alt="Улов в туре" /></figure>
+              <figure><img src="/image/IMG_SMALL-STREEM.jpg" alt="Горы и вода" /></figure>
+              <figure><img src="/image/IMG_BEN.jpg" alt="Горы и вода" /></figure>
+              <figure><img src="/image/IMG_EGEED.jpg" alt="Горы и вода" /></figure>
+              <figure><img src="/image/IMG_PANA.jpg" alt="Горы и вода" /></figure>
+              <figure><img src="/image/IMG_PandH.jpg" alt="Горы и вода" /></figure>
+              <figure><img src="/image/IMG_STEPHAN.jpg" alt="Горы и вода" /></figure>
+            </div>
           </div>
+          <button class="gallery-toggle" id="gallery-toggle" type="button" aria-expanded="false">
+            Показать всю галерею
+          </button>
         </div>
       </section>
 
