@@ -42,11 +42,37 @@ body {
   min-height: 72px;
 }
 
+/* .logo {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+} */
+
 .logo {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-weight: 800;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между иконкой и текстом */
+}
+
+.logo::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #fff; /* Цвет иконки - белый */
+  mask-image: url('/image/FishingArea2.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('/image/FishingArea2.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .nav-links {
