@@ -478,6 +478,15 @@ textarea.is-invalid {
   padding: 0.7rem 1rem;
 }
 
+/* ─── НОВОЕ: состояние ошибки отправки ─── */
+.form-note--error {
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+}
+
 /* ─── Footer ─── */
 .footer {
   background: #0f172a;
