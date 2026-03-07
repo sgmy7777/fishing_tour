@@ -3,11 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <title>Grand Varzuga Camp — Рыболовный тур на реке Большая Варзуга</title>
     <meta
       name="description"
       content="Современный рыболовный тур в Мурманской области на реке Большая Варзуга. Лагерь Grand Varzuga Camp: программа, цены, фото и онлайн-заявка."
     />
+    <link rel="canonical" href="https://grandvarzuga.ru/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grandvarzuga.ru/" />
+    <meta property="og:title" content="Grand Varzuga Camp — Рыболовный тур на реке Большая Варзуга" />
+    <meta property="og:description" content="Современный рыболовный тур в Мурманской области на реке Большая Варзуга. Лагерь Grand Varzuga Camp: программа, цены, фото и онлайн-заявка." />
+    <meta property="og:image" content="/image/IMG_FIRE.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +30,8 @@
     <header class="header" id="top">
       <div class="container nav">
         <a class="logo" href="#top">Grand Varzuga Camp</a>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню">☰</button>
-        <nav class="nav-links" id="nav-links">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <nav class="nav-links" id="nav-links" aria-label="Основная навигация">
           <a href="#about">О туре</a>
           <a href="#river">О реке</a>
           <a href="#program">Программа</a>
@@ -34,7 +44,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" aria-label="Главный экран">
         <div class="container hero-content">
           <p class="eyebrow">Мурманская область • Река Большая Варзуга</p>
           <h1>Современный рыболовный тур в сердце Русского Севера</h1>
@@ -88,6 +98,8 @@
                 <iframe
                   src="https://yandex.ru/map-widget/v1/?ll=36.067632%2C66.941709&spn=1.63%2C0.63&pt=36.067632%2C66.941709%2Cpm2rdm&l=map"
                   title="Яндекс Карта: точка Grand Varzuga Camp (66.924633, 36.696898), масштаб ~70 км"
+                  width="100%"
+                  height="280"
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
@@ -96,7 +108,6 @@
           </div>
         </div>
       </section>
-
 
       <section class="section section-alt" id="river">
         <div class="container">
@@ -220,17 +231,17 @@
           <p class="section-intro">Природа Кольского полуострова, уловы гостей и атмосфера лагеря.</p>
           <div class="gallery-collapsible">
             <div class="gallery-grid gallery-grid--collapsed" id="gallery-grid">
-              <figure><img src="/image/IMG_BEAUTIFULL.jpg" alt="Река в Мурманской области" /></figure>
-              <figure><img src="/image/IMG_BIRCH-ISLAND.jpg" alt="Северная природа" /></figure>
-              <figure><img src="/image/IMG_BOAT.jpg" alt="Рыболовный лагерь" /></figure>
-              <figure><img src="/image/IMG_FLOVERS.jpg" alt="Лес и река" /></figure>
-              <figure><img src="/image/IMG_HELICOPTER.jpg" alt="Улов в туре" /></figure>
-              <figure><img src="/image/IMG_SMALL-STREEM.jpg" alt="Горы и вода" /></figure>
-              <figure><img src="/image/IMG_BEN.jpg" alt="Горы и вода" /></figure>
-              <figure><img src="/image/IMG_EGEED.jpg" alt="Горы и вода" /></figure>
-              <figure><img src="/image/IMG_PANA.jpg" alt="Горы и вода" /></figure>
-              <figure><img src="/image/IMG_PandH.jpg" alt="Горы и вода" /></figure>
-              <figure><img src="/image/IMG_STEPHAN.jpg" alt="Горы и вода" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_BEAUTIFULL.jpg" alt="Панорамный вид на реку Варзуга в Мурманской области" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_BIRCH-ISLAND.jpg" alt="Берёзовый остров на фоне северной тайги" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_BOAT.jpg" alt="Рыболовная лодка у берега лагеря" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_FLOVERS.jpg" alt="Северные цветы на берегу реки" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_HELICOPTER.jpg" alt="Вертолётная заброска к месту рыбалки" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_SMALL-STREEM.jpg" alt="Небольшой ручей — приток реки Варзуга" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_BEN.jpg" alt="Гость лагеря с пойманным лососем" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_EGEED.jpg" alt="Нахлыстовая рыбалка на порогах" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_PANA.jpg" alt="Слияние рек Пана и Варзуга" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_PandH.jpg" alt="Рыболов на фоне горного пейзажа" /></figure>
+              <figure><img loading="lazy" src="/image/IMG_STEPHAN.jpg" alt="Участник тура у костра в лагере" /></figure>
             </div>
           </div>
           <button class="gallery-toggle" id="gallery-toggle" type="button" aria-expanded="false">
@@ -287,31 +298,65 @@
       <section class="section section-alt" id="booking">
         <div class="container">
           <h2>Оставить заявку</h2>
-          <form class="booking-form" id="booking-form">
-            <label>
-              Имя
-              <input required type="text" name="name" placeholder="Ваше имя" />
-            </label>
-            <label>
-              Телефон
-              <input required type="tel" name="phone" placeholder="+7 (___) ___-__-__" />
-            </label>
-            <label>
-              Email
-              <input required type="email" name="email" placeholder="example@mail.ru" />
-            </label>
-            <label>
-              Желаемая дата
-              <input required type="date" name="date" />
-            </label>
-            <label>
-              Количество человек
-              <input required type="number" min="1" max="10" name="guests" value="2" />
-            </label>
-            <label>
-              Комментарий
-              <textarea name="comment" rows="4" placeholder="Пожелания по туру"></textarea>
-            </label>
+          <form class="booking-form" id="booking-form" novalidate>
+            <label for="field-name">Имя</label>
+            <input
+              id="field-name"
+              required
+              type="text"
+              name="name"
+              placeholder="Ваше имя"
+              autocomplete="name"
+            />
+            <span class="field-error" id="error-name" role="alert" aria-live="polite"></span>
+
+            <label for="field-phone">Телефон</label>
+            <input
+              id="field-phone"
+              required
+              type="tel"
+              name="phone"
+              placeholder="+7 999 123 45 67"
+              autocomplete="tel"
+              inputmode="numeric"
+            />
+            <span class="field-error" id="error-phone" role="alert" aria-live="polite"></span>
+
+            <label for="field-email">Email</label>
+            <input
+              id="field-email"
+              required
+              type="email"
+              name="email"
+              placeholder="example@mail.ru"
+              autocomplete="email"
+            />
+            <span class="field-error" id="error-email" role="alert" aria-live="polite"></span>
+
+            <label for="field-date">Желаемая дата</label>
+            <input
+              id="field-date"
+              required
+              type="date"
+              name="date"
+            />
+            <span class="field-error" id="error-date" role="alert" aria-live="polite"></span>
+
+            <label for="field-guests">Количество человек</label>
+            <input
+              id="field-guests"
+              required
+              type="number"
+              min="1"
+              max="10"
+              name="guests"
+              value="2"
+            />
+            <span class="field-error" id="error-guests" role="alert" aria-live="polite"></span>
+
+            <label for="field-comment">Комментарий</label>
+            <textarea id="field-comment" name="comment" rows="4" placeholder="Пожелания по туру"></textarea>
+
             <button class="btn" type="submit">Отправить заявку</button>
             <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
           </form>
@@ -327,9 +372,9 @@
         </div>
         <div>
           <h3>Контакты</h3>
-          <p>Телефон: +7 (900) 000-00-00</p>
-          <p>Email: hello@grandvarzuga.ru</p>
-          <p>Международные запросы: +44 1980 847389</p>
+          <p>Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+          <p>Email: <a href="mailto:hello@grandvarzuga.ru">hello@grandvarzuga.ru</a></p>
+          <p>Международные запросы: <a href="tel:+441980847389">+44 1980 847389</a></p>
         </div>
       </div>
     </footer>
